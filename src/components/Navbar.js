@@ -22,6 +22,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import HeroSection1 from './HeroSection1';
 import Navbar2 from './Navbar2';
+import Featured from './Featured';
 
 const webPortal = [
   { name: 'Samarth Univ. Employee Login', href: "#" },
@@ -208,10 +209,8 @@ export default function Example() {
 
       {/* Divider */}
       <hr className="border-t-4 border-green-600" />
-      <p className="p-5">Some text inside this</p>
+      <Featured/>
       <hr className="border-t-2 border-gray-500" />
-
-      {/* Hero Section */}
       <HeroSection1 />
       <Navbar2 />
     </header>

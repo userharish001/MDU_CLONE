@@ -1,5 +1,6 @@
 import About from "@/components/About"
 import AluminiSpeaks from "@/components/AluminiSpeaks"
+import Gallery from "@/components/Gallery"
 import ITPartner from "@/components/ITPartner"
 import NewsEvents from "@/components/NewsEvents"
 import ProgramOffers from "@/components/ProgramOffers"
@@ -13,6 +14,7 @@ const page = () => {
       <ProgramOffers/>
       <NewsEvents/>
       <Social/>
+      <Gallery/>
       <AluminiSpeaks/>
       <ITPartner/>
 

@@ -24,12 +24,19 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
 
 const Academics = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+  { name: 'Faculties', href: '#',  },
+  { name: 'Academic Calender',  href: '#',},
+  { name: 'Affiliated Colleges',  href: '#' },
+  { name: 'Agenda(AC/EC/Court/FC)',href: '#',  },
+  { name: 'Cells', href: '#', icon: ArrowPathIcon },
+  { name: 'Ch. Ranbir Singh Institute of Social and Economic Change', href: '#'},
+  { name: 'Chairs/Centre',  href: '#' },
+  { name: 'Courses of other Universities Equivalent to MDU Courses', href: '#'},
+  { name: 'Date-Ph.D. Scholars',  href: '#'},
+  { name: 'Department of Alumni Relations',href: '#'},
+  { name: 'Departments',  href: '/Departments'}, 
 ];
+
 
 export default function Navbar2() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -67,9 +74,6 @@ export default function Navbar2() {
                     key={item.name}
                     className="group relative flex items-center gap-x-4 rounded-lg p-3 text-sm/6 hover:bg-gray-50"
                   >
-                    <div className="flex size-10 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon aria-hidden="true" className="size-5 text-gray-600 group-hover:text-indigo-600" />
-                    </div>
                     <div className="flex-auto">
                       <Link href={item.href} className="block font-semibold text-gray-900">
                         {item.name}
