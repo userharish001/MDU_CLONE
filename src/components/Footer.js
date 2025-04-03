@@ -1,96 +1,161 @@
-import Link from "next/link";
-import { FaFacebook, FaTwitter, FaInstagramSquare, FaYoutube } from "react-icons/fa";
-import { MdEmail, MdLabelImportant } from "react-icons/md";
+import Link from "next/link"
+import { Facebook, Instagram, Twitter } from "lucide-react"
 
-const Footer = () => {
-  let randomNumber = Math.floor(Math.random() * 1000 + 1);
+import { Button } from "@/components/ui/Button"
+import { Separator } from "@/components/ui/Separator"
 
+export function Footer() {
   return (
-    <div className="bg-black text-white">
-      {/* Social Media Links */}
-      <div className="flex justify-center gap-3 py-3">
-        <Link href="#" className="hover:text-blue-600 text-2xl"><FaFacebook /></Link>
-        <Link href="#" className="hover:text-blue-600 text-2xl"><FaTwitter /></Link>
-        <Link href="#" className="hover:text-red-600 text-2xl"><FaInstagramSquare /></Link>
-        <Link href="#" className="hover:text-red-600 text-2xl"><FaYoutube /></Link>
-        <Link href="#" className="hover:text-red-600 text-2xl"><MdEmail /></Link>
-      </div>
+    <footer className="bg-muted">
+      <div className="container px-4 md:px-6 py-12 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="md:col-span-1">
+            <Link href="/" className="font-bold text-xl">
+              LUXELEATHER
+            </Link>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Crafting premium leather goods since 2010. Every product is designed with care and built to last.
+            </p>
+            <div className="flex gap-4 mt-4">
+              <Button variant="ghost" size="icon" aschild>
+                <Link href="https://instagram.com">
+                  <Instagram className="h-5 w-5" />
+                  <span className="sr-only">Instagram</span>
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon" aschild>
+                <Link href="https://facebook.com">
+                  <Facebook className="h-5 w-5" />
+                  <span className="sr-only">Facebook</span>
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon" aschild>
+                <Link href="https://twitter.com">
+                  <Twitter className="h-5 w-5" />
+                  <span className="sr-only">Twitter</span>
+                </Link>
+              </Button>
+            </div>
+          </div>
 
-      {/* Quick Links, MDU Portals, and Important Links */}
-      <div className="flex flex-col md:flex-row justify-between px-4 gap-8 py-6">
-        {/* Quick Links */}
-        <div className="flex-1">
-          <ul className="py-2">
-            <h2 className="flex items-center gap-2 text-lg font-semibold mb-3">
-              Quick Links <MdLabelImportant />
-            </h2>
-            {[
-              "Home", "Online Links", "Forms", "Student Corner", "LMS Portal", "Seminar/Conference/Workshop",
-              "Policies", "Advertisement", "Associations/Council", "Contact Us", "Online Reappear Form Links",
-              "Union of India", "Haryana Sarkar (Acts)", "Pay Fee Online through SB Collect", "Admission Helpdesk- MDU",
-              "Admission Helpdesk- CPAS MDU", "MDU Email", "Admission Helpdesk -Foreign Students", "Mobile App Privacy Policy"
-            ].map((link, index) => (
-              <li key={index} className="mb-2">
-                <Link href="#" className="hover:text-blue-300 text-sm md:text-base">{link}</Link>
+          <div>
+            <h3 className="font-medium mb-3">Shop</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/products" className="hover:underline">
+                  All Products
+                </Link>
               </li>
-            ))}
-          </ul>
+              <li>
+                <Link href="/products/category/bags" className="hover:underline">
+                  Bags
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/category/wallets" className="hover:underline">
+                  Wallets
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/category/accessories" className="hover:underline">
+                  Accessories
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/new-arrivals" className="hover:underline">
+                  New Arrivals
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/sale" className="hover:underline">
+                  Sale
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-medium mb-3">Company</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/about" className="hover:underline">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/sustainability" className="hover:underline">
+                  Sustainability
+                </Link>
+              </li>
+              <li>
+                <Link href="/careers" className="hover:underline">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link href="/press" className="hover:underline">
+                  Press
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:underline">
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-medium mb-3">Customer Service</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/help" className="hover:underline">
+                  Help Center
+                </Link>
+              </li>
+              <li>
+                <Link href="/shipping" className="hover:underline">
+                  Shipping & Returns
+                </Link>
+              </li>
+              <li>
+                <Link href="/warranty" className="hover:underline">
+                  Warranty
+                </Link>
+              </li>
+              <li>
+                <Link href="/care" className="hover:underline">
+                  Product Care
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="hover:underline">
+                  FAQ
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        {/* MDU Portals */}
-        <div className="flex-1">
-          <ul className="py-2">
-            <h2 className="flex items-center gap-2 text-lg font-semibold mb-3">
-              MDU Portals <MdLabelImportant />
-            </h2>
-            {[
-              "NAAC", "Journals", "DSW", "Syllabi", "Tenders", "NIRF", "IQAC",
-              "Faculty Development Centre--Malaviya Mission Training Centre",
-              "Department Of Alumni Relations", "GIAN", "Anti Sexual Harassment Cell",
-              "Prevention Caste Based Discrimination", "Human Ethics Committee",
-              "Centre for Innovation, Incubation & Entrepreneurship", "Administrative Staff College"
-            ].map((link, index) => (
-              <li key={index} className="mb-2">
-                <Link href="#" className="hover:text-blue-300 text-sm md:text-base">{link}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Separator className="my-8" />
 
-        {/* Important Links */}
-        <div className="flex-1">
-          <ul className="py-2">
-            <h2 className="flex items-center gap-2 text-lg font-semibold mb-3">
-              Imp. Links <MdLabelImportant />
-            </h2>
-            {[
-              "Search Panel", "Exam Notification", "Admission", "Notices", "Datesheet", "Result Gazette",
-              "Sports", "RTI", "E-Repository", "Anti-Ragging Committee", "Term & Conditions/Disclaimer",
-              "UGC", "AICTE", "PCI", "BCI", "Mechanism for Redressing Grievances of Students", "MoE"
-            ].map((link, index) => (
-              <li key={index} className="mb-2">
-                <Link href="#" className="hover:text-blue-300 text-sm md:text-base">{link}</Link>
-              </li>
-            ))}
-          </ul>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} LUXELEATHER. All rights reserved.
+          </div>
+          <div className="flex gap-4 text-sm">
+            <Link href="/privacy" className="hover:underline">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="hover:underline">
+              Terms of Service
+            </Link>
+            <Link href="/cookies" className="hover:underline">
+              Cookie Policy
+            </Link>
+          </div>
         </div>
       </div>
-
-      {/* Copyright and Legal Notice */}
-      <p className="text-center py-1 text-sm md:text-base">
-        Copyright © 2024 MDU ROHTAK. All rights Reserved
-      </p>
-      <p className="text-center py-3 text-sm md:text-base px-4">
-        The University Logo is property of the University. If anyone uses the University Logo without written permission in any form, fully or partially, they can face Legal Consequences.
-      </p>
-
-      {/* Online Users and Developer Info */}
-      <div className="bg-gray-800 text-center py-3">
-        <p className="text-sm md:text-base">Total Online Users: {randomNumber}</p>
-        <p className="text-sm md:text-base">Designed & Developed By: Harish (M.Sc Computer Science)</p>
-      </div>
-    </div>
-  );
-};
-
-export default Footer;
+    </footer>
+  )
+}
