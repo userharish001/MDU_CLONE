@@ -9,8 +9,8 @@ import { FeaturedProducts } from "@components/featured-products";
 import { ProductCategories } from "@components/product-categories";
 import { Testimonials } from "@components/testimonials";
 import { Newsletter } from "@components/newsletter";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
+import Header from '../components/header'
+import Footer from '../components/footer'
 
 export default function Home() {
   return (

@@ -5,8 +5,8 @@ import { ChevronRight, Heart, Minus, Plus, Share2, ShoppingCart, Star } from "lu
 import { Button } from "@/components/ui/Button";
 import { Separator } from "@/components/ui/Separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
+import Header from '../components/header'
+import Footer from '../components/footer'/footer";
 import { RelatedProducts } from "@/components/related-products";
 
 export default function ProductPage({ params }) {

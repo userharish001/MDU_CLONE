@@ -5,8 +5,8 @@ import { Minus, Plus, ShoppingBag, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input";
 import { Separator } from "@/components/ui/Separator";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
+import Header from '../components/header'
+import Footer from '../components/footer'
 
 export default function CartPage() {
   // This would normally be fetched from a cart state or API
