@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Separator } from "@/components/ui/Separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs";
 import Header from '../components/header'
-import Footer from '../components/footer'/footer";
+import Footer from '../components/footer';
 import { RelatedProducts } from "@/components/related-products";
 
 export default function ProductPage({ params }) {
